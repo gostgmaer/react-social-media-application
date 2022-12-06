@@ -1,0 +1,132 @@
+.Product {
+    padding: 20px 50px;
+    display: flex;
+    gap: 50px;
+
+    .left {
+        flex: 1;
+        display: flex;
+        gap: 20px;
+        ::-webkit-scrollbar {
+            height: 5px; 
+            border-radius: 5px;   
+            background-color: aqua;          /* height of horizontal scrollbar ← You're missing this */
+            width: 5px;               /* width of vertical scrollbar */
+            border: 1px solid rgb(120, 120, 120);}
+
+        .images {
+            flex: 1;    
+            max-height: 520px;
+        overflow-y: scroll;
+        overflow-x:hidden;
+
+            img {
+                width: 100%;
+                height: 150px;
+                object-fit: cover;
+                cursor: pointer;
+                margin: 10px;
+            }
+
+        }
+
+        .mainImage {
+            flex: 5;
+
+            img {
+                width: 100%;
+                max-height: 720px;
+                object-fit: cover;
+                cursor: pointer;
+                margin: 10px;
+            }
+        }
+    }
+
+    .right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .productPrice{
+            font-size: 22px;
+            color: blue;
+            font-weight: 500;
+            .regular{
+                color: gray;
+                text-decoration: line-through;
+            }
+        }
+        p{
+            font-size: 18px;
+            font-weight: 300;
+            text-align: justify;
+
+        }
+        .quantity{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            button{
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                border: none;
+            }
+        }
+
+
+        .addToCart {
+            // position: absolute;
+            // min-width: 100px;
+           // width: -moz-fit-content;
+            width: 250px;
+            cursor: pointer;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+            color: white;
+            background-color: rgb(19, 69, 136);
+            text-transform: uppercase;
+            font-weight: 500;
+            height: 50px;
+            padding: 10px;
+            
+            
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            justify-content: start;
+            align-items: center;
+            color: rgba(0, 46, 46, 0.762);
+          
+
+            .item {
+                cursor: pointer;
+                // margin: 10px 10px 10px 0;
+            }
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 14px;
+         margin-top: 20px;
+        }
+        .details{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 14px;
+            // margin-top: 30px;
+
+        }
+    }
+}

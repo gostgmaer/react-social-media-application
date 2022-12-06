@@ -1,0 +1,99 @@
+.sidebar {
+    flex: 3;
+    height: calc(100vh - 60px);
+    overflow-y: scroll;
+
+
+
+
+   
+    .sidebarwrapper{
+        padding: 20px;
+        background-color: rgb(255, 255, 255);
+        .sidebarList{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            a{
+                color: rgb(0, 0, 0);
+                text-decoration: none;
+            }
+            .sidebarListItem{
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+            .sidebarItemIcon{
+                margin-right: 10px;
+            }
+        }
+        .siebarFriendList{
+
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            
+
+
+                .SidebarFriends{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 15px;
+
+
+
+                    .sidebarFriendsImage{
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        margin-right: 10px;
+        
+
+
+                    }
+
+
+                    .sidebarFriendName{
+
+
+
+
+
+                    }
+                }
+            
+
+        }
+        .sidebarshowMorebtn{
+            width: 150px;
+            border: 0;
+            border-radius: 5px;
+            padding: 10px;
+            font-weight: 500;
+        }
+        .siebarhrTag{
+            margin: 20px 0;
+        }
+
+    }
+}
+
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+// ::-webkit-scrollbar-button{
+//     width: 5px;
+// }
+::-webkit-scrollbar-thumb{
+ background-color: rgb(164, 162, 162);
+
+}
+::-webkit-scrollbar-track{
+   background-color: #f1f1f1;
+}
+// ::-webkit-scrollbar{
+//     width: 5px;
+// }
