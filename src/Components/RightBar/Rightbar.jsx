@@ -1,5 +1,18 @@
 import React from "react";
 import "./rightbar.scss";
+import { sidebarList, Friends } from "../Sidebar/sidebarData";
+
+const OnlineFriends = ({ first, img, url, isActive }) => {
+  return (
+    <li className="rightbarFriend">
+      <div className="rightbarProfileImageContainer">
+        <img src={img} alt={first} className="rightbarProfileImages" />
+        <span className="rightbarFriendsOnline"></span>
+      </div>
+      <span className="rightbarUsername">{first}</span>
+    </li>
+  );
+};
 
 const Rightbar = () => {
   return (
@@ -18,94 +31,9 @@ const Rightbar = () => {
         <img src="assets/images/usericon.webp" alt="" className="rightBarAdd" />
         <h4 className="rightbarTitle">Online Friends</h4>
         <ul className="rightbarFriendList">
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImageContainer">
-              <img
-                src="assets/images/usericon.webp"
-                alt=""
-                className="rightbarProfileImages"
-              />
-              <span className="rightbarFriendsOnline"></span>
-            </div>
-            <span className="rightbarUsername">John doe</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImageContainer">
-              <img
-                src="assets/images/usericon.webp"
-                alt=""
-                className="rightbarProfileImages"
-              />
-              <span className="rightbarFriendsOnline"></span>
-            </div>
-            <span className="rightbarUsername">John doe</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImageContainer">
-              <img
-                src="assets/images/usericon.webp"
-                alt=""
-                className="rightbarProfileImages"
-              />
-              <span className="rightbarFriendsOnline"></span>
-            </div>
-            <span className="rightbarUsername">John doe</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImageContainer">
-              <img
-                src="assets/images/usericon.webp"
-                alt=""
-                className="rightbarProfileImages"
-              />
-              <span className="rightbarFriendsOnline"></span>
-            </div>
-            <span className="rightbarUsername">John doe</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImageContainer">
-              <img
-                src="assets/images/usericon.webp"
-                alt=""
-                className="rightbarProfileImages"
-              />
-              <span className="rightbarFriendsOnline"></span>
-            </div>
-            <span className="rightbarUsername">John doe</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImageContainer">
-              <img
-                src="assets/images/usericon.webp"
-                alt=""
-                className="rightbarProfileImages"
-              />
-              <span className="rightbarFriendsOnline"></span>
-            </div>
-            <span className="rightbarUsername">John doe</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImageContainer">
-              <img
-                src="assets/images/usericon.webp"
-                alt=""
-                className="rightbarProfileImages"
-              />
-              <span className="rightbarFriendsOnline"></span>
-            </div>
-            <span className="rightbarUsername">John doe</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImageContainer">
-              <img
-                src="assets/images/usericon.webp"
-                alt=""
-                className="rightbarProfileImages"
-              />
-              <span className="rightbarFriendsOnline"></span>
-            </div>
-            <span className="rightbarUsername">John doe</span>
-          </li>
-          
+          {Friends.map((item) => (
+            <OnlineFriends key={item.id} {...item}></OnlineFriends>
+          ))}
         </ul>
       </div>
     </div>

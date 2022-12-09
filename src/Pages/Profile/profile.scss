@@ -1,0 +1,20 @@
+.Profile{
+   
+    .profilePageContainer{
+        display: flex;
+        justify-content: space-between;
+       
+        .profileRight{
+            flex: 9;
+            .profileRightTop{
+
+            }
+            .profileRightBottom{
+                display: flex;
+
+            }
+        }
+    }
+}
+
+
