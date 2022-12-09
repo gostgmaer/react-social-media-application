@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/Header/Header';
 import { BrowserRouter } from 'react-router-dom';
 import Home from './Pages/Homepage/Home';
+import Profile from './Pages/Profile/Profile';
 
 
 
@@ -11,7 +12,8 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-     <Home></Home>
+     {/* <Home></Home> */}
+     <Profile></Profile>
     </div></BrowserRouter>
   );
 }

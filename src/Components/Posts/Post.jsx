@@ -1,8 +1,19 @@
 import moment from "moment/moment";
-import React from "react";
+import React, { useState } from "react";
 import { MdFavorite, MdMoreVert, MdThumbUp } from "react-icons/md";
 import "./post.scss";
 const Post = ({id,first_name,last_name,description,date,image,user,comments,likes}) => {
+
+
+const [like, setLike] = useState(likes);
+const [isLike, setIsLike] = useState(false);
+
+
+const likehandler = ()=>{
+  setLike(isLike ? like-1 :like+1)
+  setIsLike(!isLike)
+}
+
   return (
     <div className="post">
       <div className="postWrapper">
@@ -24,9 +35,9 @@ const Post = ({id,first_name,last_name,description,date,image,user,comments,like
         </div>
         <div className="postBottom">
             <div className="postBottomLeft">
-            <span className="likeIcon" style={{color:"red"}}><MdFavorite></MdFavorite></span>
-            <span className="likeIcon" style={{color:"grey"}}><MdThumbUp></MdThumbUp></span>
-            <span className="POstlikeCounter">{likes} People Liked</span>
+            <span className="likeIcon" onClick={likehandler} style={{color:"red"}}><MdFavorite></MdFavorite></span>
+            <span className="likeIcon" onClick={likehandler} style={{color:"grey"}}><MdThumbUp></MdThumbUp></span>
+            <span className="POstlikeCounter">{like} People Liked</span>
             </div>
             <div className="postBottomRight">
             <span className="postCommenttext">{comments} Comments</span>
